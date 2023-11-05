@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            /* unvisited link */
+            a:link {
+                color: #00ffc4;
+                text-decoration: none;
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+
+            /* visited link */
+            a:visited {
+                color: cyan;
+                text-decoration: none;
+                
+            }
+
+            /* mouse over link */
+            a:hover {
+                color: hotpink;
+                text-decoration: none;
+            }
+
+            /* selected link */
+            a:active {
+                color: red;
+                text-decoration: none;
+            }
+
+        </style>
+        
+       <title>Home Page</title>
+       <link rel="stylesheet" href="websystems.css">
+        <meta name="viewport" content="width = device-width, initial-scale =1">
+        
+    </head>
+    
+    <body>
+        
+        <section id="banner2">
+            <div class="topbar">
+            <div class="menu">
+                   
+                <ul>
+                    <li class="logo"><a href="index.html"><img src="Images/logo.png" class="logo"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="past.html">PAST</a></li>
+                    <li><a href="future.html">FUTURE</a></li>  
+                    <li><a href="comments.html">COMMENTS</a></li>
+                    
+                    </ul>
+                    <div class="banner-text">
+                    <h1>The Past</h1>
+                    <p>My Past Experiences With Computing</p>
+                    <div class="banner-but">
+                    <a href="#about"><span></span>Read More</a>
+                </div>
+            </div>
+                
+           </div>
+        </div>
+            
+            <div id="sidemenu">
+            <bar>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="past.html">PAST</a></li>   
+                <li><a href="future.html">FUTURE</a></li>  
+                <li><a href="comments.html">COMMENTS</a></li>  
+            </ul>
+            </bar>
+        </div>
+        <div id="menuBut">
+            <img src="Images/menu.png" id="menu">
+        </div>
+                
+        </section>
+        
+       
+        
+        <section id="about">
+            <div class="past-content-title">
+                <h1>Past Computing Experiences</h1>         
+            </div>
+            <div class="past-content">
+                <div class="past-content-text">
+                    <h1>High School Study</h1>
+                    <div class="past-description"></div>
+                        
+                    <div class="past-text">
+                        
+                        <ul>
+                        <li>I learned basic HTML and created a website using the software Dreamweaver</li>
+                        <li>I made a weather forecast programme in a school team project</li>
+                        <li>I learned the basics of networking</li>
+                        </ul>
+ 
+                    </div>
+                </div>
+                <div class="past-image">
+                    <img src="Images/study.jpg">
+                    <!-- Image from GoodFon, https://www.goodfon.com/wallpaper/minimalizm-monitor-kompyuter.html -->
+
+                </div>
+            </div>
+            
+        
+        </section>  
+        
+        
+        <script>
+        var menuBut = document.getElementById("menuBut")
+        var menuBut = document.getElementById("sidemenu")
+        var menuBut = document.getElementById("menu")
+        
+        sidemenu.style.right = "-250px";
+        
+        menuBut.onclick = function(){
+            if(sidemenu.style.right == "-250px") {
+                sidemenu.style.right = "0";
+                menu.src = "Images/cross.png";
+            }
+            else{ sidemenu.style.right = "-250px";
+            menu.src = "Images/menu.png";
+            }
+        }
+            
+        </script>
+       
+        </body>
+    </html>
