@@ -1,0 +1,98 @@
+# Enter global configuration mode
+enable
+configure terminal
+
+# Create VLANs
+vlan 10
+name SALES
+exit
+vlan 20
+name MARKETING
+exit
+
+# Assign ports to VLANs
+interface FastEthernet0/1
+switchport mode access
+switchport access vlan 10
+exit
+interface FastEthernet0/2
+switchport mode access
+switchport access vlan 20
+exit
+
+# Set up trunk port
+interface GigabitEthernet0/1
+switchport mode trunk
+exit
+
+//-----------------------------------------------------------
+
+S1(config-vlan)#vlan 20
+S1(config-vlan)#name Students
+S1(config-vlan)#vlan 30
+S1(config-vlan)#name Guest(Default)
+S1(config-vlan)#vlan 99
+S1(config-vlan)#name Management&Native
+S1(config-vlan)#vlan 150
+S1(config-vlan)#name VOICE
+
+S1#show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                Fa0/5, Fa0/6, Fa0/7, Fa0/8
+                                                Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                Fa0/13, Fa0/14, Fa0/15, Fa0/16
+                                                Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                Fa0/21, Fa0/22, Fa0/23, Fa0/24
+                                                Gig0/1, Gig0/2
+10   Faculty/Staff                    active    
+20   Students                         active    
+30   Guest(Default)                   active    
+99   Management&Native                active    
+150  VOICE                            active    
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active
+
+S2(config)# interface f0/11
+S2(config-if)# switchport mode access
+S2(config-if)# switchport access vlan 10
+
+S2(config-if)#interface f0/18
+S2(config-if)#switchport mode access
+S2(config-if)#switchport access vlan 20
+
+S2(config-if)#interface f0/6
+S2(config-if)#switchport mode access
+S2(config-if)#switchport access vlan 30
+
+S3(config)#interface f0/11
+S3(config-if)#switchport mode access
+S3(config-if)#switchport access vlan 10
+
+S3(config-if)#interface f0/18
+S3(config-if)#switchport mode access
+S3(config-if)#switchport access vlan 20
+
+S3(config-if)#interface f0/6
+S3(config-if)#switchport mode access
+S3(config-if)#switchport access vlan 30
+
+R1(config)# access-list 10 permit host 192.168.3.3
+
+R2(config)# access-list 10 permit host 192.168.3.3
+
+R3(config)# access-list 10 permit host 192.168.3.3
+
+R1(config)# access-list 100 permit udp any host 192.168.1.3 eq domain
+
+R1(config)# access-list 100 permit tcp any host 192.168.1.3 eq smtp
+
+R1(config)# access-list 100 deny tcp any host 192.168.1.3 eq 443
+
+R1(config)# access-list 120 permit tcp host 192.168.3.3 host 10.1.1.1 eq 22
+
+R1(config)# access-list 100 deny tcp any host 192.168.1.3 eq 3333
